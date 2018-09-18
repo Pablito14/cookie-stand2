@@ -39,7 +39,7 @@ var seaTacAirport = {
   calculateSales: function() {
     for (var i = 0; i < hours.length; i++) {
       var cookieSale = Math.floor(this.generateHourlyCustomers(this.minCust, this.maxCust) * this.avgSale);
-      this.cookieSales.push(cookieSale); // note the difference between cookieSale vs cookieSales whhich is plural (the array)
+      this.cookieSales.push(cookieSale);
     }
   },
 };
@@ -60,7 +60,7 @@ var seattleCenter = {
   calculateSales: function() {
     for (var i = 0; i < hours.length; i++) {
       var cookieSale = Math.floor(this.generateHourlyCustomers(this.minCust, this.maxCust) * this.avgSale);
-      this.cookieSales.push(cookieSale); // note the difference between cookieSale vs cookieSales whhich is plural (the array)
+      this.cookieSales.push(cookieSale);
     }
   },
 };
@@ -81,7 +81,7 @@ var capitolHill = {
   calculateSales: function() {
     for (var i = 0; i < hours.length; i++) {
       var cookieSale = Math.floor(this.generateHourlyCustomers(this.minCust, this.maxCust) * this.avgSale);
-      this.cookieSales.push(cookieSale); // note the difference between cookieSale vs cookieSales whhich is plural (the array)
+      this.cookieSales.push(cookieSale);
     }
   },
 };
@@ -102,7 +102,7 @@ var Alki = {
   calculateSales: function() {
     for (var i = 0; i < hours.length; i++) {
       var cookieSale = Math.floor(this.generateHourlyCustomers(this.minCust, this.maxCust) * this.avgSale);
-      this.cookieSales.push(cookieSale); // note the difference between cookieSale vs cookieSales whhich is plural (the array)
+      this.cookieSales.push(cookieSale);
     }
   },
 };
