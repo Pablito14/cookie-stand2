@@ -106,5 +106,3 @@ var Alki = {
     }
   },
 };
-
-//pickles
