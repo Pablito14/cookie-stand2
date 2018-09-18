@@ -1,0 +1,33 @@
+/* *{
+    border: solid black 1px;
+
+} */
+
+header{
+    position: relative;
+}
+
+h1{
+
+    margin: auto;
+    padding: auto;
+}
+#Table {
+overflow: scroll;
+}
+
+table{
+    border: solid rgb(52, 121, 211) 1px;
+    /* overflow-x: scroll; */
+    margin: auto;
+}
+
+th{
+    border: solid black 1px;
+    padding: 10px;
+}
+
+td{
+    border: solid black 1px;
+    padding: 10px;
+}
