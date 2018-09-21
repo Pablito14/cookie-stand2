@@ -24,8 +24,7 @@ Store.prototype.calculateSales = function() {
   for (var i = 0; i < hours.length; i++) {
     var cookieSale = Math.floor(
       this.generateCustomers(this.minCustomer, this.maxCustomer) *
-        this.avgCookieSalePerCustomer
-    );
+      this.avgCookieSalePerCustomer);
     this.cookieSales.push(cookieSale);
   }
 };
@@ -46,6 +45,28 @@ function calculateAllTotals(){
   return totalT;
 }
 
+Store.prototype.renderData = function() {
+  this.calculateSales();
+  var trEl = document.createElement('tr');
+  var tdNameEl = document.createElement('th');
+  tdNameEl.textContent = this.name;
+  trEl.appendChild(tdNameEl);
+  for (var i = 0; i < hours.length; i++) {
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.cookieSales[i];
+    trEl.appendChild(tdEl);
+  }
+  var tdEl2 = document.createElement('td');
+  tdEl2.textContent = this.dailyTotals();
+  trEl.appendChild(tdEl2);
+  table.appendChild(trEl);
+};
+
+function createTableArea() {
+  makeHeaderRow();
+  var grabTable = document.getElementById('Table');
+  grabTable.appendChild(table);
+}
 
 function makeHeaderRow() {
   // creating a table header element
@@ -55,6 +76,7 @@ function makeHeaderRow() {
   // put an empty cell at A1
   trTableHeaderElement.appendChild(document.createElement('th'));
   // run throught the array of hours and create a cell for each element
+
   for (var hour of hours) {
     var tdHeaderElement = document.createElement('th');
     tdHeaderElement.appendChild(document.createTextNode(hour));
@@ -70,8 +92,7 @@ function makeHeaderRow() {
   table.appendChild(tableHeaderElement);
 }
 
-function makeFooterRow()
-{
+function makeFooterRow(){
   var tFootEl = document.createElement('tfoot');
   var totalLabelEl = document.createElement('th');
   totalLabelEl.textContent = 'Hourly Totals:';
@@ -92,28 +113,7 @@ function makeFooterRow()
   table.appendChild(tFootEl);
 }
 
-var createTableArea = function() {
-  makeHeaderRow();
-  var grabTable = document.getElementById('Table');
-  grabTable.appendChild(table);
-};
 
-Store.prototype.renderData = function() {
-  this.calculateSales();
-  var trEl = document.createElement('tr');
-  var tdNameEl = document.createElement('th');
-  tdNameEl.textContent = this.name;
-  trEl.appendChild(tdNameEl);
-  for (var i = 0; i < hours.length; i++) {
-    var tdEl = document.createElement('td');
-    tdEl.textContent = this.cookieSales[i];
-    trEl.appendChild(tdEl);
-  }
-  var tdEl2 = document.createElement('td');
-  tdEl2.textContent = this.dailyTotals();
-  trEl.appendChild(tdEl2);
-  table.appendChild(trEl);
-};
 
 
 createTableArea();
