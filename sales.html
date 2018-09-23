@@ -1,22 +1,58 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>Salmon Cookies Sales</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
-<body>
+  <head>
+    <title>Sales Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
     <header>
-        <h1>Sales Table</h1>
-        <p>Here you can see our data for each store, and with further improvements rolling out regularly you will be able to add your stores name, and info and it will automatically put it in there for you!</p>
+      This is our sales page where  you can enter information about your store to see our projected claculations!
     </header>
+
     <main>
-        <div id="Table"></div>
+
+      <section>
+        <form id="sales-data">
+        <table id="tblsales">
+          <thead></thead>
+          <tbody></tbody>
+          <tfoot></tfoot>
+        </table>
+        </form>
+      </section>
+
+    <section>
+			<form id="add-location">
+				<fieldset>
+					<legend>Add a new store to the table!!!</legend>
+			
+					<label for="locName">Location Name
+					  <input name="locName" type="text">
+          </label>
+                    
+					<label for="min">Minimum Customers Per Hour
+					  <input name="min" type="number">
+          </label>
+                    
+					<label for="max">Maximum Customers Per Hour
+	          <input name="max" type="number">
+          </label>
+			
+					<label for="avg">Average Cookies Per Sale
+					  <input name="avg" type="text">
+          </label>
+
+					<button type="submit">Click here to add!</button>
+				</fieldset>
+			</form>
+    </section>
+
     </main>
+
     <footer>
-        <p>Salmon Cookies LLC.</p>
     </footer>
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

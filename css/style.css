@@ -1,33 +1,21 @@
-/* *{
-    border: solid black 1px;
-
-} */
-
-header{
-    position: relative;
-}
-
-h1{
-
-    margin: auto;
-    padding: auto;
-}
-#Table {
-overflow: scroll;
-}
-
-table{
-    border: solid rgb(52, 121, 211) 1px;
-    /* overflow-x: scroll; */
-    margin: auto;
-}
-
-th{
-    border: solid black 1px;
-    padding: 10px;
-}
-
-td{
-    border: solid black 1px;
-    padding: 10px;
-}
+section {
+    margin: 2em 1em;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  label input {
+    display: block;
+  }
+  
+  input {
+    width: 3em;
+    border:  1px solid #444;
+    outline: none;
+  }
+  input:hover {
+    border: 1px solid #444;
+  }
+  
