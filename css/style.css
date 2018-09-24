@@ -1,0 +1,42 @@
+header{
+  background-color: rgb(189, 242, 255);
+}
+
+header nav{
+  
+}
+
+footer nav{
+  display: inline-block;
+  margin: auto;
+}
+
+header img{
+  max-width: 25%;
+  float:left;
+}
+
+section {
+    margin: 2em 1em;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  label input {
+    display: block;
+  }
+  
+  input {
+    width: 3em;
+    border:  1px solid #444;
+    outline: none;
+  }
+  input:hover {
+    border: 1px solid #444;
+  }
+  
+  tfoot{
+    border: 1px solid #444;
+  }
