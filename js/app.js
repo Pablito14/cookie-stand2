@@ -24,10 +24,7 @@ Store.allLocations = [];
 
 Store.prototype.getSales = function() {
   for (var i = 0; i < hours.length; i++) {
-    var numCustomers = rando(
-      this.minCustomersPerHour,
-      this.maxCustomersPerHour,
-    );
+    var numCustomers = rando(this.minCustomersPerHour,this.maxCustomersPerHour);
     var hourlyCount = Math.floor(numCustomers * this.avgCookiesPerSale);
     this.cookiesPerHour.push(hourlyCount);
     this.totalCookies += hourlyCount;
@@ -121,6 +118,7 @@ function handleChange(event) {
   Store.allLocations[location].cookiesPerHour[hour] = newValue;
   renderFooter();
 }
+
 
 addForm.addEventListener('submit', handleSubmit);
 salesForm.addEventListener('change', handleChange);
