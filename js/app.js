@@ -134,3 +134,4 @@ renderStores();
 renderFooter();
 
 console.log(Store.allLocations);
+
