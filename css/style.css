@@ -1,19 +1,52 @@
+*{
+  font-family: 'Krub', sans-serif;
+}
+
 header{
   background-color: rgb(189, 242, 255);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
 
-header nav{
-  
+nav{
+  float: right;
 }
 
-footer nav{
+
+#container{
+  border: solid black 1px;
+  border-radius: 8px;
+  background-color: rgb(226, 137, 114);
+}
+
+#explain{
   display: inline-block;
+  margin: 10px 30%;
+}
+
+.image{
+  max-width: 300px;
+  margin: 20px;
+  display: block;
   margin: auto;
 }
 
+#header{
+display: inline-block;
+max-width: 25%;
+font-family: 'Krub', sans-serif;
+}
+
 header img{
-  max-width: 25%;
-  float:left;
+  max-width: 20%;
+  display: inline-block;
+  border: solid black 1px;
+}
+
+main{
+  margin-top: 135px;
 }
 
 section {
@@ -39,4 +72,15 @@ section {
   
   tfoot{
     border: 1px solid #444;
+  }
+
+  #add-location{
+  background-color:  rgb(226, 137, 114);
+  }
+
+  footer{
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 43%;
   }
